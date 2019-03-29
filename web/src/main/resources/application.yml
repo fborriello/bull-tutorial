@@ -1,0 +1,15 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+---
+swagger:
+  enabled: true
+  api:
+    info:
+      title: "BULL sample"
+      description: "Simple web application containing a service that uses BULL for the object transformation."
+      version: "1.0"
+      contact:
+        name: "Fabio Borriello"
+        email: "borriello.fabio@gmail.com"
