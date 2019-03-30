@@ -1,9 +1,9 @@
 package com.hotels.dao.service.ext.domain.response;
 
+import com.hotels.common.constants.PhoneType;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import com.hotels.common.constants.PhoneType;
 
 @AllArgsConstructor
 @Getter

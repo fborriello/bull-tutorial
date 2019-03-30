@@ -62,7 +62,7 @@ public class MovieController {
             @ApiImplicitParam(name = "title", value = "The movie title.",
                     paramType = "query", required = true, dataType = "string"),
             @ApiImplicitParam(name = "genre", value = "The movie genre", paramType = "query",
-                    required = false, dataType = "string", allowableValues = "action, comedy, horror, science_fiction")
+                    dataType = "string", allowableValues = "action, comedy, horror, science_fiction")
     })
     @ApiResponses({
             @ApiResponse(code = HTTP_OK, message = "The found movies"),
@@ -74,12 +74,11 @@ public class MovieController {
         notNull(movieRequest, "movieRequest cannot be null!");
         final Transformer beanTransformer = beanUtils.getTransformer();
         MovieSvcRequest movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
-
         List<MovieSvc> foundMovies = movieService.searchMovie(movieSvcRequest);
-        return new ResponseEntity<>(transformResponse(beanTransformer, foundMovies), OK);
+        return new ResponseEntity<>(transformResponse(foundMovies), OK);
     }
 
-    private List<Movie> transformResponse(final Transformer beanTransformer, final List<MovieSvc> foundMovies) {
+    private List<Movie> transformResponse(final List<MovieSvc> foundMovies) {
         return foundMovies.stream()
                 .map(movieSvc -> movieSvcResponseTransformer.transform(movieSvc, Movie.class))
                 .collect(Collectors.toList());
