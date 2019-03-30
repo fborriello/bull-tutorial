@@ -1,4 +1,4 @@
-package com.hotels.service.config;
+package com.hotels.service.movie.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,8 @@ public class MovieSvcTransformerConfig {
     public Transformer movieDaoResponseTransformer(final BeanUtils beanUtils) {
         return beanUtils.getTransformer()
                 .setFlatFieldNameTransformation(true)
-                .withFieldMapping(new FieldMapping("name", "fullName"))
-                .withFieldMapping(new FieldMapping("surname", "fullName"))
+                .withFieldMapping(new FieldMapping("fullName", "name"))
+                .withFieldMapping(new FieldMapping("fullName", "surname"))
                 .withFieldTransformer(new FieldTransformer<String, String>("name", fullName -> fullName.split(SPACE)[0]))
                 .withFieldTransformer(new FieldTransformer<String, String>("surname", fullName -> fullName.split(SPACE)[1]));
     }

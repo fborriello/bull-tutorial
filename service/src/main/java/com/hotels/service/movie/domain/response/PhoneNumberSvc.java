@@ -1,4 +1,4 @@
-package com.hotels.service.domain.response;
+package com.hotels.service.movie.domain.response;
 
 import com.hotels.common.constants.PhoneType;
 

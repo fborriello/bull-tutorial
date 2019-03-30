@@ -1,4 +1,4 @@
-package com.hotels.web.domain.response;
+package com.hotels.web.movie.domain.response;
 
 import java.util.List;
 

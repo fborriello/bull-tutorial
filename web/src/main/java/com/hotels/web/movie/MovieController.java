@@ -1,4 +1,4 @@
-package com.hotels.web;
+package com.hotels.web.movie;
 
 import static java.net.HttpURLConnection.HTTP_BAD_REQUEST;
 import static java.net.HttpURLConnection.HTTP_INTERNAL_ERROR;
@@ -23,15 +23,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hotels.beans.BeanUtils;
-import com.hotels.beans.model.FieldMapping;
-import com.hotels.beans.model.FieldTransformer;
 import com.hotels.beans.transformer.Transformer;
-import com.hotels.service.MovieService;
-import com.hotels.service.domain.request.MovieSvcRequest;
-import com.hotels.service.domain.response.MovieSvc;
-import com.hotels.service.domain.response.PersonSvc;
-import com.hotels.web.domain.request.MovieRequest;
-import com.hotels.web.domain.response.Movie;
+import com.hotels.service.movie.MovieService;
+import com.hotels.service.movie.domain.request.MovieSvcRequest;
+import com.hotels.service.movie.domain.response.MovieSvc;
+import com.hotels.web.movie.domain.request.MovieRequest;
+import com.hotels.web.movie.domain.response.Movie;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.Api;
@@ -65,7 +62,7 @@ public class MovieController {
             @ApiImplicitParam(name = "title", value = "The movie title.",
                     paramType = "query", required = true, dataType = "string"),
             @ApiImplicitParam(name = "genre", value = "The movie genre", paramType = "query",
-                    required = true, dataType = "string", allowableValues = "action, comedy, horror, science_fiction")
+                    required = false, dataType = "string", allowableValues = "action, comedy, horror, science_fiction")
     })
     @ApiResponses({
             @ApiResponse(code = HTTP_OK, message = "The found movies"),

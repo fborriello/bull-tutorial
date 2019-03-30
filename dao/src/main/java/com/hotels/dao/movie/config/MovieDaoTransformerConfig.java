@@ -1,23 +1,22 @@
-package com.hotels.web.config;
+package com.hotels.dao.movie.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import static org.apache.commons.lang3.StringUtils.SPACE;
 
 import com.hotels.beans.BeanUtils;
 import com.hotels.beans.model.FieldMapping;
 import com.hotels.beans.model.FieldTransformer;
 import com.hotels.beans.transformer.Transformer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MovieTransformerConfig {
-    private static final String SPACE = " ";
-
+public class MovieDaoTransformerConfig {
     @Bean
-    public Transformer movieSvcResponseTransformer(final BeanUtils beanUtils) {
+    public Transformer movieDaoResponseTransformer(final BeanUtils beanUtils) {
         return beanUtils.getTransformer()
                 .setFlatFieldNameTransformation(true)
-                .withFieldMapping(new FieldMapping("name", "fullName"))
-                .withFieldMapping(new FieldMapping("surname", "fullName"))
+                .withFieldMapping(new FieldMapping("fullName", "name"))
+                .withFieldMapping(new FieldMapping("fullName", "surname"))
                 .withFieldTransformer(new FieldTransformer<String, String>("name", fullName -> fullName.split(SPACE)[0]))
                 .withFieldTransformer(new FieldTransformer<String, String>("surname", fullName -> fullName.split(SPACE)[1]));
     }

@@ -1,16 +1,15 @@
-package com.hotels.service.domain.response;
-
-import java.util.List;
+package com.hotels.dao.movie.domain.response;
 
 import com.hotels.common.constants.Sex;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Getter
-public class PersonSvc {
+public class PersonDao {
     private final String fullName;
     private final Sex sex;
-    private final List<PhoneNumberSvc> phoneNumbers;
+    private final List<PhoneNumberDao> phoneNumbers;
 }

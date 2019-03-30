@@ -1,4 +1,4 @@
-package com.hotels.dao.domain.request;
+package com.hotels.dao.movie.domain.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
