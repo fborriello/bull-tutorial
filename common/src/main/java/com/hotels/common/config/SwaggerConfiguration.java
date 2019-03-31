@@ -36,6 +36,10 @@ public class SwaggerConfiguration {
     @Value("${swagger.api.info.contact.email}")
     private String contactEmail;
 
+    /**
+     * Initialize swagger properties.
+     * @return {@link PropertySourcesPlaceholderConfigurer}
+     */
     @Bean
     public static PropertySourcesPlaceholderConfigurer swaggerProperties() {
         PropertySourcesPlaceholderConfigurer p = new PropertySourcesPlaceholderConfigurer();

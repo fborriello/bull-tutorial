@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.hotels.beans.transformer.Transformer;
+import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,14 +20,14 @@ public class MovieDao {
     @Autowired
     private Transformer movieDaoResponseTransformer;
 
-    public List<MovieDao> searchMovie(final MovieDaoRequest movieDaoRequest) {
+    public List<MovieDaoResponse> searchMovie(final MovieDaoRequest movieDaoRequest) {
         List<BlockbusterMovie> foundMovies = blockbusterService.searchMovie(movieDaoRequest.getTitle());
         return transformResponse(foundMovies);
     }
 
-    private List<MovieDao> transformResponse(final List<BlockbusterMovie> foundMovies) {
+    private List<MovieDaoResponse> transformResponse(final List<BlockbusterMovie> foundMovies) {
         return foundMovies.stream()
-                .map(movie -> movieDaoResponseTransformer.transform(movie, MovieDao.class))
+                .map(movie -> movieDaoResponseTransformer.transform(movie, MovieDaoResponse.class))
                 .collect(Collectors.toList());
     }
 }

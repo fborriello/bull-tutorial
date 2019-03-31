@@ -26,7 +26,7 @@ import com.hotels.beans.BeanUtils;
 import com.hotels.beans.transformer.Transformer;
 import com.hotels.service.movie.MovieService;
 import com.hotels.service.movie.domain.request.MovieSvcRequest;
-import com.hotels.service.movie.domain.response.MovieSvc;
+import com.hotels.service.movie.domain.response.MovieSvcResponse;
 import com.hotels.web.movie.domain.request.MovieRequest;
 import com.hotels.web.movie.domain.response.Movie;
 
@@ -74,13 +74,13 @@ public class MovieController {
         notNull(movieRequest, "movieRequest cannot be null!");
         final Transformer beanTransformer = beanUtils.getTransformer();
         MovieSvcRequest movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
-        List<MovieSvc> foundMovies = movieService.searchMovie(movieSvcRequest);
+        List<MovieSvcResponse> foundMovies = movieService.searchMovie(movieSvcRequest);
         return new ResponseEntity<>(transformResponse(foundMovies), OK);
     }
 
-    private List<Movie> transformResponse(final List<MovieSvc> foundMovies) {
+    private List<Movie> transformResponse(final List<MovieSvcResponse> foundMovies) {
         return foundMovies.stream()
-                .map(movieSvc -> movieSvcResponseTransformer.transform(movieSvc, Movie.class))
+                .map(movieSvcResponse -> movieSvcResponseTransformer.transform(movieSvcResponse, Movie.class))
                 .collect(Collectors.toList());
     }
 }

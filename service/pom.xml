@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>com.hotels</groupId>
-        <artifactId>bull-sample</artifactId>
+        <artifactId>bull-tutorial</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -31,4 +31,12 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -9,7 +9,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class MovieSvc {
+public class MovieSvcResponse {
     private final String id;
     private final String title;
     private final String description;

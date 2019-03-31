@@ -5,10 +5,11 @@ import static org.springframework.util.Assert.notNull;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hotels.service.movie.domain.response.MovieSvc;
+import com.hotels.service.movie.domain.response.MovieSvcResponse;
 import com.hotels.dao.movie.MovieDao;
 import com.hotels.dao.movie.domain.request.MovieDaoRequest;
 import com.hotels.service.movie.domain.request.MovieSvcRequest;
@@ -23,17 +24,17 @@ public class MovieService {
     @Autowired
     private MovieDao movieDao;
 
-    public List<MovieSvc> searchMovie(final MovieSvcRequest movieSvcRequest) {
+    public List<MovieSvcResponse> searchMovie(final MovieSvcRequest movieSvcRequest) {
         notNull(movieSvcRequest, "movieSvcRequest cannot be null!");
         Transformer beanTransformer = beanUtils.getTransformer();
         MovieDaoRequest movieDaoRequest = beanTransformer.transform(movieSvcRequest, MovieDaoRequest.class);
-        List<MovieDao> foundMovies = movieDao.searchMovie(movieDaoRequest);
+        List<MovieDaoResponse> foundMovies = movieDao.searchMovie(movieDaoRequest);
         return transformResponse(beanTransformer, foundMovies);
     }
 
-    private List<MovieSvc> transformResponse(final Transformer beanTransformer, final List<MovieDao> foundMovies) {
+    private List<MovieSvcResponse> transformResponse(final Transformer beanTransformer, final List<MovieDaoResponse> foundMovies) {
         return foundMovies.stream()
-                .map(movie -> beanTransformer.transform(movie, MovieSvc.class))
+                .map(movie -> beanTransformer.transform(movie, MovieSvcResponse.class))
                 .collect(Collectors.toList());
     }
 }

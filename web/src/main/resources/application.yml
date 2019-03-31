@@ -7,7 +7,7 @@ swagger:
   enabled: true
   api:
     info:
-      title: "BULL sample"
+      title: "BULL Tutorial"
       description: "Simple web application containing a service that uses BULL for the object transformation."
       version: "1.0"
       contact:

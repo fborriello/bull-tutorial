@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hotels</groupId>
-    <artifactId>bull-sample</artifactId>
+    <artifactId>bull-tutorial</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -16,6 +16,7 @@
         <lombok.version>1.18.4</lombok.version>
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.5.22</swagger-annotations.version>
+        <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
     </properties>
 
     <parent>
@@ -88,6 +89,31 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${maven.checkstyle.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>validate</id>
+                            <phase>validate</phase>
+                            <configuration>
+                                <skip>true</skip>
+                            </configuration>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 
     <!-- common dependencies available on all modules -->
     <dependencies>

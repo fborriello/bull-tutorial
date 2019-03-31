@@ -16,8 +16,8 @@ public class MovieTransformerConfig {
     public Transformer movieSvcResponseTransformer(final BeanUtils beanUtils) {
         return beanUtils.getTransformer()
                 .setFlatFieldNameTransformation(true)
-                .withFieldMapping(new FieldMapping("name", "fullName"))
-                .withFieldMapping(new FieldMapping("surname", "fullName"))
+                .withFieldMapping(new FieldMapping("fullName", "name"))
+                .withFieldMapping(new FieldMapping("fullName", "surname"))
                 .withFieldTransformer(new FieldTransformer<String, String>("name", fullName -> fullName.split(SPACE)[0]))
                 .withFieldTransformer(new FieldTransformer<String, String>("surname", fullName -> fullName.split(SPACE)[1]));
     }
