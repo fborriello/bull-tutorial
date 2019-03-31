@@ -45,7 +45,7 @@ public class MovieController {
     private BeanUtils beanUtils;
 
     @Autowired
-    private Transformer movieSvcResponseTransformer;
+    private Transformer movieResponseTransformer;
 
     @Autowired
     private MovieService movieService;
@@ -60,7 +60,7 @@ public class MovieController {
     @ApiOperation(value = "Returns the found movies.")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "title", value = "The movie title.",
-                    paramType = "query", required = true, dataType = "string"),
+                    paramType = "query", dataType = "string"),
             @ApiImplicitParam(name = "genre", value = "The movie genre", paramType = "query",
                     dataType = "string", allowableValues = "action, comedy, horror, science_fiction")
     })
@@ -80,7 +80,7 @@ public class MovieController {
 
     private List<Movie> transformResponse(final List<MovieSvcResponse> foundMovies) {
         return foundMovies.stream()
-                .map(movieSvcResponse -> movieSvcResponseTransformer.transform(movieSvcResponse, Movie.class))
+                .map(movieSvcResponse -> movieResponseTransformer.transform(movieSvcResponse, Movie.class))
                 .collect(Collectors.toList());
     }
 }

@@ -13,3 +13,6 @@ swagger:
       contact:
         name: "Fabio Borriello"
         email: "borriello.fabio@gmail.com"
+---
+movie:
+  vat: 20

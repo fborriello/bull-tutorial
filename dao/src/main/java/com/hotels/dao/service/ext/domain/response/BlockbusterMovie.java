@@ -16,4 +16,5 @@ public class BlockbusterMovie {
     private final Staff director;
     private final List<Staff> actors;
     private final Genre genre;
+    private final float price;
 }

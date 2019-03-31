@@ -16,4 +16,5 @@ public class MovieSvcResponse {
     private final PersonSvc director;
     private final List<PersonSvc> actors;
     private final Genre genre;
+    private final PriceSvc price;
 }

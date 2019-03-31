@@ -23,7 +23,7 @@ public class BlockbusterService {
     private BlockbusterMovie buildFakeResponse(final String title) {
         Staff director = createDirector();
         List<Staff> actors = createActors();
-        return new BlockbusterMovie(UUID.randomUUID().toString(), title, "Great film!", director, actors, Genre.CARTOON);
+        return new BlockbusterMovie(UUID.randomUUID().toString(), title, "Great film!", director, actors, Genre.CARTOON, 20.0f);
     }
 
     private Staff createDirector() {

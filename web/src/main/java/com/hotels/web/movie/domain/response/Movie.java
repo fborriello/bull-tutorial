@@ -16,4 +16,5 @@ public class Movie {
     private final Person director;
     private final List<Person> actors;
     private final Genre genre;
+    private final Price price;
 }

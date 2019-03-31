@@ -24,6 +24,9 @@ public class MovieService {
     @Autowired
     private MovieDao movieDao;
 
+    @Autowired
+    private Transformer movieSvcResponseTransformer;
+
     public List<MovieSvcResponse> searchMovie(final MovieSvcRequest movieSvcRequest) {
         notNull(movieSvcRequest, "movieSvcRequest cannot be null!");
         Transformer beanTransformer = beanUtils.getTransformer();
@@ -34,7 +37,7 @@ public class MovieService {
 
     private List<MovieSvcResponse> transformResponse(final Transformer beanTransformer, final List<MovieDaoResponse> foundMovies) {
         return foundMovies.stream()
-                .map(movie -> beanTransformer.transform(movie, MovieSvcResponse.class))
+                .map(movie -> movieSvcResponseTransformer.transform(movie, MovieSvcResponse.class))
                 .collect(Collectors.toList());
     }
 }

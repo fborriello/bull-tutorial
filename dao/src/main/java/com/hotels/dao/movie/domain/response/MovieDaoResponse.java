@@ -15,4 +15,5 @@ public class MovieDaoResponse {
     private final PersonDao director;
     private final List<PersonDao> actors;
     private final Genre genre;
+    private final float price;
 }
