@@ -1,8 +1,10 @@
-# bull-tutorial
+# Bull tutorial
 
 Simple web application containing a service that uses BULL for the object transformation
 
 ## Maven build
+
+[![Build Status](https://travis-ci.org/fborriello/bull-tutorial.svg?branch=master)](https://travis-ci.org/fborriello/bull-tutorial)
 
 ~~~
 mvn clean install
