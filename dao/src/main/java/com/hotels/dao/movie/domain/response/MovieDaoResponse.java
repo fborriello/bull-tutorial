@@ -1,10 +1,11 @@
 package com.hotels.dao.movie.domain.response;
 
+import java.util.List;
+
 import com.hotels.common.constants.Genre;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.util.List;
 
 @AllArgsConstructor
 @Getter

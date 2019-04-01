@@ -1,6 +1,6 @@
 package com.hotels.common.constants;
 
-public enum PhoneType {
+public enum ContactType {
     MOBILE,
     OFFICE,
     HOME

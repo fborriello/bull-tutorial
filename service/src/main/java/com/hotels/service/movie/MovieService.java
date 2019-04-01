@@ -32,10 +32,10 @@ public class MovieService {
         Transformer beanTransformer = beanUtils.getTransformer();
         MovieDaoRequest movieDaoRequest = beanTransformer.transform(movieSvcRequest, MovieDaoRequest.class);
         List<MovieDaoResponse> foundMovies = movieDao.searchMovie(movieDaoRequest);
-        return transformResponse(beanTransformer, foundMovies);
+        return transformResponse(foundMovies);
     }
 
-    private List<MovieSvcResponse> transformResponse(final Transformer beanTransformer, final List<MovieDaoResponse> foundMovies) {
+    private List<MovieSvcResponse> transformResponse(final List<MovieDaoResponse> foundMovies) {
         return foundMovies.stream()
                 .map(movie -> movieSvcResponseTransformer.transform(movie, MovieSvcResponse.class))
                 .collect(Collectors.toList());

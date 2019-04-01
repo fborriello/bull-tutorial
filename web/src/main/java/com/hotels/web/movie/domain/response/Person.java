@@ -13,5 +13,5 @@ public class Person {
     private final String name;
     private final String surname;
     private final Sex sex;
-    private final List<PhoneNumber> phoneNumbers;
+    private final List<Contact> contacts;
 }

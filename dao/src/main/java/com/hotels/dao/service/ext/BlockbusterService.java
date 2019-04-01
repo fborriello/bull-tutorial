@@ -8,10 +8,10 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import com.hotels.common.constants.Genre;
-import com.hotels.common.constants.PhoneType;
+import com.hotels.common.constants.ContactType;
 import com.hotels.common.constants.Sex;
 import com.hotels.dao.service.ext.domain.response.BlockbusterMovie;
-import com.hotels.dao.service.ext.domain.response.PhoneNumber;
+import com.hotels.dao.service.ext.domain.response.Contact;
 import com.hotels.dao.service.ext.domain.response.Staff;
 
 @Service
@@ -27,12 +27,12 @@ public class BlockbusterService {
     }
 
     private Staff createDirector() {
-        PhoneNumber phoneNumberDaoResponse = new PhoneNumber("86943", PhoneType.MOBILE);
+        Contact phoneNumberDaoResponse = new Contact("86943", ContactType.MOBILE);
         return new Staff("Donald Duck", Sex.MALE, singletonList(phoneNumberDaoResponse));
     }
 
     private List<Staff> createActors() {
-        PhoneNumber phoneNumberDaoResponse = new PhoneNumber("123456", PhoneType.HOME);
+        Contact phoneNumberDaoResponse = new Contact("123456", ContactType.HOME);
         Staff actress = new Staff("Daisy Duck", Sex.FEMALE, singletonList(phoneNumberDaoResponse));
         return singletonList(actress);
     }

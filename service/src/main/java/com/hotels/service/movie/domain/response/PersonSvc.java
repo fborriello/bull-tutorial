@@ -12,5 +12,5 @@ import lombok.Getter;
 public class PersonSvc {
     private final String fullName;
     private final Sex sex;
-    private final List<PhoneNumberSvc> phoneNumbers;
+    private final List<ContactSvc> contacts;
 }

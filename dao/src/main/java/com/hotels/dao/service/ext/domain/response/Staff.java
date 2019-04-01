@@ -12,5 +12,5 @@ import lombok.Getter;
 public class Staff {
     private final String fullName;
     private final Sex sex;
-    private final List<PhoneNumber> phoneNumbers;
+    private final List<Contact> contacts;
 }
