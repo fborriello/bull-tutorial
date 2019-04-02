@@ -3,11 +3,11 @@ package com.hotels.dao.movie;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.hotels.beans.transformer.Transformer;
-import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hotels.beans.transformer.Transformer;
+import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import com.hotels.dao.movie.domain.request.MovieDaoRequest;
 import com.hotels.dao.service.ext.BlockbusterService;
 import com.hotels.dao.service.ext.domain.response.BlockbusterMovie;
@@ -22,6 +22,7 @@ public class MovieDao {
 
     public List<MovieDaoResponse> searchMovie(final MovieDaoRequest movieDaoRequest) {
         List<BlockbusterMovie> foundMovies = blockbusterService.searchMovie(movieDaoRequest.getTitle());
+        // response transformation
         return transformResponse(foundMovies);
     }
 

@@ -1,16 +1,15 @@
 package com.hotels.service.movie.config;
 
-import com.hotels.beans.BeanUtils;
-import com.hotels.beans.model.FieldMapping;
-import com.hotels.beans.model.FieldTransformer;
-import com.hotels.beans.transformer.Transformer;
+import java.util.function.Function;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.function.Function;
-
-import static org.apache.commons.lang3.StringUtils.SPACE;
+import com.hotels.beans.BeanUtils;
+import com.hotels.beans.model.FieldMapping;
+import com.hotels.beans.model.FieldTransformer;
+import com.hotels.beans.transformer.Transformer;
 
 @Configuration
 public class MovieSvcTransformerConfig {

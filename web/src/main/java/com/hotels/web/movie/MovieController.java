@@ -74,8 +74,10 @@ public class MovieController {
     public ResponseEntity<List<Movie>> searchMovie(@Valid final MovieRequest movieRequest) {
         notNull(movieRequest, "movieRequest cannot be null!");
         final Transformer beanTransformer = beanUtils.getTransformer();
+        // request transformation
         MovieSvcRequest movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
         List<MovieSvcResponse> foundMovies = movieService.searchMovie(movieSvcRequest);
+        // response transformation
         return new ResponseEntity<>(transformResponse(foundMovies), OK);
     }
 
