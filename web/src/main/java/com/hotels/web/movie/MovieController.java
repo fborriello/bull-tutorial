@@ -73,7 +73,7 @@ public class MovieController {
     @GetMapping(path = V1_MOVIE_SEARCH, produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Movie>> searchMovie(@Valid final MovieRequest movieRequest) {
         notNull(movieRequest, "movieRequest cannot be null!");
-        final Transformer beanTransformer = beanUtils.getTransformer();
+        final Transformer beanTransformer = beanUtils.getTransformer().setValidationEnabled(true);
         // request transformation
         MovieSvcRequest movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
         List<MovieSvcResponse> foundMovies = movieService.searchMovie(movieSvcRequest);
@@ -82,7 +82,6 @@ public class MovieController {
     }
 
     private List<Movie> transformResponse(final List<MovieSvcResponse> foundMovies) {
-        Function<Object, Movie> transformerFunction = BeanUtils.getTransformer(Movie.class);
         return foundMovies.stream()
                 .map(movieSvcResponse -> movieResponseTransformer.transform(movieSvcResponse, Movie.class))
                 .collect(Collectors.toList());

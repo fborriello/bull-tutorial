@@ -1,9 +1,9 @@
 package com.hotels.dao.movie.domain.request;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
-@AllArgsConstructor
+@Builder
 @Getter
 public class MovieDaoRequest {
     private final String title;
