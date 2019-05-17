@@ -1,4 +1,4 @@
-# Bull tutorial
+# BULL tutorial
 
 Simple web application containing a service that uses BULL for the object transformation
 
