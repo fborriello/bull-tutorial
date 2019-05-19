@@ -2,6 +2,7 @@ package com.hotels.web.movie;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -24,7 +25,7 @@ public class MovieControllerTest extends AbstractControllerTest {
 
     @Test
     @SuppressWarnings("unchecked")
-    public void changeStateOnEachCallTest() throws Exception {
+    public void testMovieSearchReturnsTheSearchedTitle() throws Exception {
         // GIVEN
         MockHttpServletRequestBuilder searchRequest = get(V1_SEARCH_ENDPOINT)
                 .param(TITLE_PARAM_NAME, FILM_NAME)
@@ -39,5 +40,19 @@ public class MovieControllerTest extends AbstractControllerTest {
         assertEquals(OK.value(), response.getStatus());
         assertFalse(movies.isEmpty());
         assertEquals(FILM_NAME, movies.get(0).get(TITLE_PARAM_NAME));
+    }
+
+    @Test
+    public void testMovieSearchReturnsBadRequestIfTheRequestIsNotValid() throws Exception {
+        // GIVEN
+        MockHttpServletRequestBuilder searchRequest = get(V1_SEARCH_ENDPOINT)
+                .contentType(APPLICATION_JSON)
+                .accept(APPLICATION_JSON_VALUE);
+
+        // WHEN
+        MockHttpServletResponse response = mvc.perform(searchRequest).andReturn().getResponse();
+
+        // THEN
+        assertEquals(BAD_REQUEST.value(), response.getStatus());
     }
 }
