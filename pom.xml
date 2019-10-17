@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <spring.lib.version>2.1.6.RELEASE</spring.lib.version>
+        <spring.lib.version>2.2.0.RELEASE</spring.lib.version>
         <bull.version>1.1.21</bull.version>
         <lombok.version>1.18.8</lombok.version>
         <swagger.version>2.9.2</swagger.version>
