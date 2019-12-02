@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hotels.beans.transformer.Transformer;
+import com.hotels.beans.transformer.BeanTransformer;
 import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import com.hotels.dao.movie.domain.request.MovieDaoRequest;
 import com.hotels.dao.service.ext.BlockbusterService;
@@ -18,7 +18,7 @@ public class MovieDao {
     private BlockbusterService blockbusterService;
 
     @Autowired
-    private Transformer movieDaoResponseTransformer;
+    private BeanTransformer movieDaoResponseTransformer;
 
     public List<MovieDaoResponse> searchMovie(final MovieDaoRequest movieDaoRequest) {
         List<BlockbusterMovie> foundMovies = blockbusterService.searchMovie(movieDaoRequest.getTitle());

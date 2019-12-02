@@ -5,6 +5,7 @@ import static org.springframework.util.Assert.notNull;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.hotels.beans.transformer.BeanTransformer;
 import com.hotels.dao.movie.domain.response.MovieDaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,6 @@ import com.hotels.dao.movie.MovieDao;
 import com.hotels.dao.movie.domain.request.MovieDaoRequest;
 import com.hotels.service.movie.domain.request.MovieSvcRequest;
 import com.hotels.beans.BeanUtils;
-import com.hotels.beans.transformer.Transformer;
 
 @Service
 public class MovieService {
@@ -25,11 +25,11 @@ public class MovieService {
     private MovieDao movieDao;
 
     @Autowired
-    private Transformer movieSvcResponseTransformer;
+    private BeanTransformer movieSvcResponseTransformer;
 
     public List<MovieSvcResponse> searchMovie(final MovieSvcRequest movieSvcRequest) {
         notNull(movieSvcRequest, "movieSvcRequest cannot be null!");
-        Transformer beanTransformer = beanUtils.getTransformer();
+        BeanTransformer beanTransformer = beanUtils.getTransformer();
         // request transformation
         MovieDaoRequest movieDaoRequest = beanTransformer.transform(movieSvcRequest, MovieDaoRequest.class);
         List<MovieDaoResponse> foundMovies = movieDao.searchMovie(movieDaoRequest);

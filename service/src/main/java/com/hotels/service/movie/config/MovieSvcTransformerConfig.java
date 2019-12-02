@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.hotels.beans.BeanUtils;
-import com.hotels.beans.model.FieldMapping;
-import com.hotels.beans.model.FieldTransformer;
-import com.hotels.beans.transformer.Transformer;
+import com.hotels.beans.transformer.BeanTransformer;
+import com.hotels.transformer.model.FieldMapping;
+import com.hotels.transformer.model.FieldTransformer;
 
 @Configuration
 public class MovieSvcTransformerConfig {
@@ -17,10 +17,10 @@ public class MovieSvcTransformerConfig {
     private int vat;
 
     @Bean
-    public Transformer movieSvcResponseTransformer(final BeanUtils beanUtils) {
+    public BeanTransformer movieSvcResponseTransformer(final BeanUtils beanUtils) {
         return beanUtils.getTransformer()
-                .withFieldMapping(new FieldMapping("price", "price.netPrice"))
-                .withFieldMapping(new FieldMapping("price", "price.grossPrice"))
+                .withFieldMapping(new FieldMapping<>("price", "price.netPrice"))
+                .withFieldMapping(new FieldMapping<>("price", "price.grossPrice"))
                 .withFieldTransformer(new FieldTransformer<>("price.grossPrice", addVat()));
     }
 
