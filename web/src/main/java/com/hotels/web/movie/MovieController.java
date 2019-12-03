@@ -8,7 +8,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.util.Assert.notNull;
 
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hotels.beans.BeanUtils;
-import com.hotels.beans.transformer.Transformer;
+import com.hotels.beans.transformer.BeanTransformer;
 import com.hotels.service.movie.MovieService;
 import com.hotels.service.movie.domain.request.MovieSvcRequest;
 import com.hotels.service.movie.domain.response.MovieSvcResponse;
@@ -46,7 +45,7 @@ public class MovieController {
     private BeanUtils beanUtils;
 
     @Autowired
-    private Transformer movieResponseTransformer;
+    private BeanTransformer movieResponseTransformer;
 
     @Autowired
     private MovieService movieService;
@@ -73,7 +72,7 @@ public class MovieController {
     @GetMapping(path = V1_MOVIE_SEARCH, produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Movie>> searchMovie(@Valid final MovieRequest movieRequest) {
         notNull(movieRequest, "movieRequest cannot be null!");
-        final Transformer beanTransformer = beanUtils.getTransformer().setValidationEnabled(true);
+        final BeanTransformer beanTransformer = beanUtils.getTransformer().setValidationEnabled(true);
         // request transformation
         MovieSvcRequest movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
         List<MovieSvcResponse> foundMovies = movieService.searchMovie(movieSvcRequest);
