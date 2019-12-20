@@ -3,6 +3,7 @@
 Simple Spring Boot application containing a service that uses BULL for the object transformation
 
 [![Build Status](https://travis-ci.org/fborriello/bull-tutorial.svg?branch=master)](https://travis-ci.org/fborriello/bull-tutorial)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=fborriello/bull-tutorial)](https://dependabot.com)
 
 ## Requirements
 
@@ -29,4 +30,3 @@ mvn spring-boot:run
 Open the Swagger page:
 
 http://localhost:8080/swagger-ui.html
-
