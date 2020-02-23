@@ -7,7 +7,7 @@ Simple Spring Boot application containing a service that uses BULL for the objec
 
 ## Requirements
 
-* JDK `1.8` or above
+* JDK `11` or above
 * Maven
 * IDE
 
