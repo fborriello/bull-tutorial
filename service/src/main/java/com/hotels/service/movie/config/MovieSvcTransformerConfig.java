@@ -19,6 +19,7 @@ public class MovieSvcTransformerConfig {
     @Bean
     public BeanTransformer movieSvcResponseTransformer(final BeanUtils beanUtils) {
         return beanUtils.getTransformer()
+                .setCustomBuilderTransformationEnabled(true)
                 .withFieldMapping(new FieldMapping<>("price", "price.netPrice"))
                 .withFieldMapping(new FieldMapping<>("price", "price.grossPrice"))
                 .withFieldTransformer(new FieldTransformer<>("price.grossPrice", addVat()));
