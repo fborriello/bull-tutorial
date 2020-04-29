@@ -16,8 +16,10 @@
         <lombok.version>1.18.12</lombok.version>
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.6.1</swagger-annotations.version>
-        <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
+        <maven.checkstyle.plugin.version>3.1.0</maven.checkstyle.plugin.version>
         <wiremock.version>2.26.3</wiremock.version>
+        <spotless.maven.plugin.version>1.27.0</spotless.maven.plugin.version>
+        <import.order>\#java,\#javax,\#org,\#,\#com,,\#lombok,java,javax,org,,com,,lombok</import.order>
     </properties>
 
     <parent>
@@ -105,16 +107,44 @@
                     <version>${maven.checkstyle.plugin.version}</version>
                     <executions>
                         <execution>
-                            <id>validate</id>
-                            <phase>validate</phase>
-                            <configuration>
-                                <skip>true</skip>
-                            </configuration>
+                            <phase>process-sources</phase>
                             <goals>
                                 <goal>check</goal>
                             </goals>
+                            <configuration>
+                                <skip>true</skip>
+                                <configLocation>config/checkstyle/rules.xml</configLocation>
+                                <suppressionsLocation>config/checkstyle/suppression.xml</suppressionsLocation>
+                                <encoding>UTF-8</encoding>
+                                <consoleOutput>true</consoleOutput>
+                                <failsOnError>true</failsOnError>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            </configuration>
                         </execution>
                     </executions>
+                </plugin>
+                <!-- code formatter -->
+                <plugin>
+                    <groupId>com.diffplug.spotless</groupId>
+                    <artifactId>spotless-maven-plugin</artifactId>
+                    <version>${spotless.maven.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>process-sources</phase>
+                            <goals>
+                                <goal>apply</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <java>
+                            <removeUnusedImports />
+                            <trimTrailingWhitespace />
+                            <importOrder>
+                                <order>${import.order}</order>
+                            </importOrder>
+                        </java>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
