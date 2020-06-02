@@ -18,7 +18,7 @@
         <swagger-annotations.version>1.6.1</swagger-annotations.version>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
         <wiremock.version>2.26.3</wiremock.version>
-        <spotless.maven.plugin.version>1.31.1</spotless.maven.plugin.version>
+        <spotless.maven.plugin.version>1.31.2</spotless.maven.plugin.version>
         <import.order>\#java,\#javax,\#org,\#,\#com,,\#lombok,java,javax,org,,com,,lombok</import.order>
     </properties>
 
