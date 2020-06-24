@@ -1,6 +1,6 @@
 package com.hotels.common.config;
 
-import static java.util.Collections.EMPTY_LIST;
+import static java.util.Collections.emptyList;
 
 import static springfox.documentation.builders.PathSelectors.any;
 import static springfox.documentation.builders.RequestHandlerSelectors.withClassAnnotation;
@@ -14,15 +14,16 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import springfox.documentation.swagger1.annotations.EnableSwagger;
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 /**
  * Swagger configuration.
  */
 @Configuration
-@EnableSwagger2
+@EnableSwagger
+@EnableSwagger2WebMvc
 public class SwaggerConfiguration {
-
     @Value("${swagger.enabled}")
     private boolean swaggerEnabled;
     @Value("${swagger.api.info.title}")
@@ -57,7 +58,7 @@ public class SwaggerConfiguration {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo(title, description, version, null, contact(), null, null, EMPTY_LIST);
+        return new ApiInfo(title, description, version, null, contact(), null, null, emptyList());
     }
 
     private Contact contact() {

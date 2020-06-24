@@ -31,6 +31,10 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger1</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
