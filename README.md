@@ -8,26 +8,25 @@ Simple Spring Boot application containing a service that uses BULL for the objec
 
 ## Requirements
 
-* JDK `11` or above
+* JDK 11 or above
 * Maven
 * IDE
 
 ## Maven build
 
-~~~
+```shell script
 mvn clean install
-~~~
+```
 
 ## Run project
 
 From the `web` project folder, execute:
 
-~~~
+```shell script
 mvn spring-boot:run
-~~~
+```
 
 ## Test API
 
-Open the Swagger page:
-
-http://localhost:8080/swagger-ui.html
+* Swagger page: [Swagger-ui.html](http://localhost:8080/swagger-ui.html?urls.primaryName=default)
+* [API Docs](http://localhost:8080/v2/api-docs)
