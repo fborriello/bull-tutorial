@@ -15,7 +15,7 @@
         <bull.version>1.7.3</bull.version>
         <lombok.version>1.18.12</lombok.version>
         <swagger.version>2.10.5</swagger.version>
-        <swagger-annotations.version>1.6.1</swagger-annotations.version>
+        <swagger-annotations.version>1.6.2</swagger-annotations.version>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
         <wiremock.version>2.26.3</wiremock.version>
         <spotless.maven.plugin.version>1.31.3</spotless.maven.plugin.version>
