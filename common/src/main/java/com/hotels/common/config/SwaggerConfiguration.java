@@ -14,15 +14,13 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger1.annotations.EnableSwagger;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Swagger configuration.
  */
 @Configuration
-@EnableSwagger
-@EnableSwagger2WebMvc
+@EnableSwagger2
 public class SwaggerConfiguration {
     @Value("${swagger.enabled}")
     private boolean swaggerEnabled;

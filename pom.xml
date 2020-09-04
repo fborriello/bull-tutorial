@@ -15,7 +15,6 @@
         <bull.version>1.7.3</bull.version>
         <lombok.version>1.18.12</lombok.version>
         <swagger.version>3.0.0</swagger.version>
-        <swagger-annotations.version>1.6.2</swagger-annotations.version>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
         <wiremock.version>2.26.3</wiremock.version>
         <spotless.maven.plugin.version>2.1.0</spotless.maven.plugin.version>
@@ -77,23 +76,13 @@
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger1</artifactId>
+                <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.tomakehurst</groupId>
