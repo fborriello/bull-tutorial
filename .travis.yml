@@ -1,4 +1,5 @@
 language: java
 jdk:
   - openjdk11
-install: true
+script: travis_retry mvn clean install --settings config/travis/mvn-settings.xml
+install: skip
