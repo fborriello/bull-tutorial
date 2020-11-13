@@ -11,12 +11,13 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <spring.lib.version>2.3.5.RELEASE</spring.lib.version>
+        <spring.lib.version>2.4.0</spring.lib.version>
         <bull.version>1.7.4</bull.version>
         <lombok.version>1.18.16</lombok.version>
         <swagger.version>3.0.0</swagger.version>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
         <wiremock.version>2.26.3</wiremock.version>
+        <junit.version>4.13.1</junit.version>
         <spotless.maven.plugin.version>2.6.0</spotless.maven.plugin.version>
         <import.order>\#java,\#javax,\#org,\#,\#com,,\#lombok,java,javax,org,,com,,lombok</import.order>
     </properties>
@@ -88,6 +89,12 @@
                 <groupId>com.github.tomakehurst</groupId>
                 <artifactId>wiremock</artifactId>
                 <version>${wiremock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
