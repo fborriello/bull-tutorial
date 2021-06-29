@@ -5,7 +5,7 @@ import com.hotels.common.constants.ContactType;
 import lombok.Getter;
 
 @Getter
-public class ContactSvc {
+public final class ContactSvc {
     private final String value;
     private final ContactType contactType;
 

@@ -27,7 +27,7 @@ public class MovieControllerTest extends AbstractControllerTest {
     @SuppressWarnings("unchecked")
     public void testMovieSearchReturnsTheSearchedTitle() throws Exception {
         // GIVEN
-        MockHttpServletRequestBuilder searchRequest = get(V1_SEARCH_ENDPOINT)
+        var searchRequest = get(V1_SEARCH_ENDPOINT)
                 .param(TITLE_PARAM_NAME, FILM_NAME)
                 .contentType(APPLICATION_JSON)
                 .accept(APPLICATION_JSON_VALUE);

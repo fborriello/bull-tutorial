@@ -29,10 +29,10 @@ public class MovieService {
 
     public List<MovieSvcResponse> searchMovie(final MovieSvcRequest movieSvcRequest) {
         notNull(movieSvcRequest, "movieSvcRequest cannot be null!");
-        BeanTransformer beanTransformer = beanUtils.getTransformer();
+        var beanTransformer = beanUtils.getTransformer();
         // request transformation
-        MovieDaoRequest movieDaoRequest = beanTransformer.transform(movieSvcRequest, MovieDaoRequest.class);
-        List<MovieDaoResponse> foundMovies = movieDao.searchMovie(movieDaoRequest);
+        var movieDaoRequest = beanTransformer.transform(movieSvcRequest, MovieDaoRequest.class);
+        var foundMovies = movieDao.searchMovie(movieDaoRequest);
         // response transformation
         return transformResponse(foundMovies);
     }
