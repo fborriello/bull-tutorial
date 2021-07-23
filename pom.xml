@@ -13,7 +13,7 @@
         <jdk.version>15</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.lib.version>2.5.2</spring.lib.version>
+        <spring.lib.version>2.5.3</spring.lib.version>
         <bull.version>2.0.1.6</bull.version>
         <lombok.version>1.18.20</lombok.version>
         <swagger.version>3.0.0</swagger.version>
