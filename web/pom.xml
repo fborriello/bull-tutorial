@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.hotels</groupId>
+        <groupId>com.expediagroup</groupId>
         <artifactId>bull-tutorial</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -24,12 +24,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hotels</groupId>
+            <groupId>com.expediagroup</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.hotels</groupId>
+            <groupId>com.expediagroup</groupId>
             <artifactId>service</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -51,7 +51,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.hotels.DemoApplication</mainClass>
+                    <mainClass>com.expediagroup.DemoApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>

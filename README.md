@@ -4,7 +4,7 @@ Simple Spring Boot application containing a service that uses BULL for the objec
 
 [![Build Status](https://travis-ci.com/fborriello/bull-tutorial.svg?branch=master)](https://travis-ci.com/fborriello/bull-tutorial)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=fborriello/bull-tutorial)](https://dependabot.com)
-[![Bull enabled](https://img.shields.io/badge/bull-enabled-red)](https://github.com/HotelsDotCom/bull)
+[![Bull enabled](https://img.shields.io/badge/bull-enabled-red)](https://github.com/ExpediaGroup/bull)
 
 ## Requirements
 

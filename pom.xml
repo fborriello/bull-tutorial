@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hotels</groupId>
+    <groupId>com.expediagroup</groupId>
     <artifactId>bull-tutorial</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -14,7 +14,7 @@
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <spring.lib.version>2.5.3</spring.lib.version>
-        <bull.version>2.0.1.6</bull.version>
+        <bull.version>2.1.0-SNAPSHOT</bull.version>
         <lombok.version>1.18.20</lombok.version>
         <swagger.version>3.0.0</swagger.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
@@ -59,17 +59,17 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>com.hotels</groupId>
+                <groupId>com.expediagroup</groupId>
                 <artifactId>service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hotels</groupId>
+                <groupId>com.expediagroup</groupId>
                 <artifactId>dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hotels.beans</groupId>
+                <groupId>com.expediagroup.beans</groupId>
                 <artifactId>bull-bean-transformer</artifactId>
                 <version>${bull.version}</version>
             </dependency>
@@ -178,11 +178,10 @@
         </pluginManagement>
     </build>
 
-
     <!-- common dependencies available on all modules -->
     <dependencies>
         <dependency>
-            <groupId>com.hotels.beans</groupId>
+            <groupId>com.expediagroup.beans</groupId>
             <artifactId>bull-bean-transformer</artifactId>
         </dependency>
         <dependency>
