@@ -22,7 +22,7 @@
         <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
         <wiremock.version>2.27.2</wiremock.version>
         <junit.version>4.13.2</junit.version>
-        <spotless.maven.plugin.version>2.12.2</spotless.maven.plugin.version>
+        <spotless.maven.plugin.version>2.12.3</spotless.maven.plugin.version>
         <import.order>\#java,\#javax,\#org,\#,\#com,,\#lombok,java,javax,org,,com,,lombok</import.order>
     </properties>
 
