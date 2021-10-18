@@ -1,14 +1,15 @@
 package com.expediagroup.web.movie.domain.request;
 
-import javax.validation.constraints.NotNull;
-
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.Value;
 
 @Getter
-@Setter
+@Value
+@AllArgsConstructor
 public class MovieRequest {
     @NotNull
-    private String title;
-    private String genre;
+    String title;
+    String genre;
 }

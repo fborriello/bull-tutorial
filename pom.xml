@@ -15,6 +15,7 @@
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <spring.lib.version>2.5.5</spring.lib.version>
         <bull.version>2.1.0</bull.version>
+        <jakarta.validation-api.version>3.0.0</jakarta.validation-api.version>
         <lombok.version>1.18.22</lombok.version>
         <swagger.version>3.0.0</swagger.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
@@ -72,6 +73,11 @@
                 <groupId>com.expediagroup.beans</groupId>
                 <artifactId>bull-bean-transformer</artifactId>
                 <version>${bull.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>${jakarta.validation-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
