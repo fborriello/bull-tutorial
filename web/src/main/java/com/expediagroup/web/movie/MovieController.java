@@ -19,7 +19,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.expediagroup.beans.BeanUtils;
@@ -32,6 +34,7 @@ import com.expediagroup.web.movie.domain.response.Movie;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.Api;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -70,11 +73,10 @@ public class MovieController {
             @ApiResponse(code = HTTP_INTERNAL_ERROR, message = "Any error in the service")
     })
     @GetMapping(path = V1_MOVIE_SEARCH, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Movie>> searchMovie(@Valid final MovieRequest movieRequest) {
-        notNull(movieRequest, "movieRequest cannot be null!");
+    public ResponseEntity<List<Movie>> searchMovie(@RequestParam @NotNull final String title, @RequestParam(required = false) final String genre) {
         var beanTransformer = beanUtils.getTransformer().setValidationEnabled(true);
         // request transformation
-        var movieSvcRequest = beanTransformer.transform(movieRequest, MovieSvcRequest.class);
+        var movieSvcRequest = beanTransformer.transform(new MovieRequest(title, genre), MovieSvcRequest.class);
         var foundMovies = movieService.searchMovie(movieSvcRequest);
         // response transformation
         return new ResponseEntity<>(transformResponse(foundMovies), OK);
