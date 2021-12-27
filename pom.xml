@@ -13,7 +13,7 @@
         <jdk.version>15</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.lib.version>2.5.7</spring.lib.version>
+        <spring.lib.version>2.5.8</spring.lib.version>
         <bull.version>2.1.1</bull.version>
         <!-- validation dependencies -->
         <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
