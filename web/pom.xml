@@ -53,7 +53,7 @@
                 <configuration>
                     <mainClass>com.expediagroup.DemoApplication</mainClass>
                     <jvmArguments>
-                        --enable-preview --add-opens=java.base/java.util=ALL-UNNAMED
+                        --add-opens=java.base/java.util=ALL-UNNAMED
                     </jvmArguments>
                 </configuration>
             </plugin>

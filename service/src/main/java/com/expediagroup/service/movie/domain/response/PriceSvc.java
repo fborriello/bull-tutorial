@@ -1,11 +1,5 @@
 package com.expediagroup.service.movie.domain.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+public record PriceSvc(float netPrice, float grossPrice) {
 
-@AllArgsConstructor
-@Getter
-public class PriceSvc {
-    private final float netPrice;
-    private final float grossPrice;
 }
