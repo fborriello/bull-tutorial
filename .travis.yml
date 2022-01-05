@@ -1,5 +1,5 @@
 language: java
 jdk:
-  - openjdk15
+  - oraclejdk17
 script: travis_retry mvn clean install --settings config/travis/mvn-settings.xml
 install: skip
