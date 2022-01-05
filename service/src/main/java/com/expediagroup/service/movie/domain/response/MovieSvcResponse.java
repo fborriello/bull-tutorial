@@ -9,5 +9,4 @@ public record MovieSvcResponse(String id, String title, String description,
                                List<PersonSvc> actors,
                                Genre genre,
                                PriceSvc price) {
-
 }
