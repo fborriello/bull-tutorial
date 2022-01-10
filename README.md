@@ -29,4 +29,4 @@ mvn spring-boot:run
 ## Test API
 
 * Swagger page: [Swagger-ui](http://localhost:8080/swagger-ui/)
-* [API Docs](http://localhost:8080/v2/api-docs)
+* [API Docs](http://localhost:8080/api-docs)

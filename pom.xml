@@ -18,9 +18,10 @@
         <!-- validation dependencies -->
         <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
         <glassfish.jakarta.el.version>4.0.2</glassfish.jakarta.el.version>
-        <jakarta.validation-api.version>3.0.1</jakarta.validation-api.version>
+        <javax.el.version>2.1.0.v201004190952</javax.el.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
         <lombok.version>1.18.22</lombok.version>
-        <swagger.version>3.0.0</swagger.version>
+        <springdoc.version>1.6.4</springdoc.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
@@ -85,15 +86,25 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.glassfish</groupId>-->
+<!--                <artifactId>jakarta.el</artifactId>-->
+<!--                <version>${glassfish.jakarta.el.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>jakarta.validation</groupId>-->
+<!--                <artifactId>jakarta.validation-api</artifactId>-->
+<!--                <version>${jakarta.validation-api.version}</version>-->
+<!--            </dependency>-->
             <dependency>
-                <groupId>org.glassfish</groupId>
-                <artifactId>jakarta.el</artifactId>
-                <version>${glassfish.jakarta.el.version}</version>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el</artifactId>
+                <version>${javax.el.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.validation</groupId>
-                <artifactId>jakarta.validation-api</artifactId>
-                <version>${jakarta.validation-api.version}</version>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -102,14 +113,9 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.tomakehurst</groupId>

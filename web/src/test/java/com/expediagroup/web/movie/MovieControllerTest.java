@@ -34,7 +34,7 @@ public class MovieControllerTest extends AbstractControllerTest {
 
         // WHEN
         MockHttpServletResponse response = mvc.perform(searchRequest).andReturn().getResponse();
-        List<Map> movies = jsonMapper.readValue(response.getContentAsString(), List.class);
+        List<Map> movies = OBJECT_MAPPER.readValue(response.getContentAsString(), List.class);
 
         // THEN
         assertEquals(OK.value(), response.getStatus());

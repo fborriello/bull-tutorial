@@ -1,6 +1,6 @@
 package com.expediagroup.web.movie.domain.request;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 public record MovieRequest(@NotNull String title, String genre) {
 }

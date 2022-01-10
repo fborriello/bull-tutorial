@@ -2,9 +2,7 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
----
-swagger:
-  enabled: true
+apiDoc:
   api:
     info:
       title: "BULL Tutorial"
@@ -13,6 +11,11 @@ swagger:
       contact:
         name: "Fabio Borriello"
         email: "borriello.fabio@gmail.com"
+springdoc:
+  api-docs.path: "/api-docs"
+  swagger-ui:
+    enabled: true
+    path: "/swagger-ui/"
 ---
 movie:
   vat: 20
