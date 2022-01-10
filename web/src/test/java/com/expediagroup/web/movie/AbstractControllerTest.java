@@ -18,11 +18,10 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 public abstract class AbstractControllerTest {
     private static final int PORT = 9999;
+    protected static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     @Autowired
     MockMvc mvc;
-
-    final ObjectMapper jsonMapper = new ObjectMapper();
 
     @Rule
     public WireMockRule wireMockRule = new WireMockRule(PORT);

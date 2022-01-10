@@ -13,14 +13,13 @@
         <jdk.version>17</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.lib.version>2.5.7</spring.lib.version>
-        <bull.version>2.1.2</bull.version>
+        <spring.lib.version>2.6.2</spring.lib.version>
+        <bull.version>2.2.0</bull.version>
         <!-- validation dependencies -->
-        <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
-        <glassfish.jakarta.el.version>4.0.2</glassfish.jakarta.el.version>
-        <jakarta.validation-api.version>3.0.1</jakarta.validation-api.version>
+        <hibernate-validator.version>6.2.1.Final</hibernate-validator.version>
+        <glassfish.javax.el.version>3.0.0</glassfish.javax.el.version>
         <lombok.version>1.18.22</lombok.version>
-        <swagger.version>3.0.0</swagger.version>
+        <springdoc.version>1.6.4</springdoc.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.checkstyle.plugin.version>3.1.2</maven.checkstyle.plugin.version>
@@ -35,7 +34,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.7</version>
+        <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -87,13 +86,8 @@
             </dependency>
             <dependency>
                 <groupId>org.glassfish</groupId>
-                <artifactId>jakarta.el</artifactId>
-                <version>${glassfish.jakarta.el.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.validation</groupId>
-                <artifactId>jakarta.validation-api</artifactId>
-                <version>${jakarta.validation-api.version}</version>
+                <artifactId>javax.el</artifactId>
+                <version>${glassfish.javax.el.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -102,14 +96,9 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.tomakehurst</groupId>
