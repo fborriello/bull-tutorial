@@ -16,7 +16,7 @@
         <spring.lib.version>2.6.2</spring.lib.version>
         <bull.version>2.2.0</bull.version>
         <!-- validation dependencies -->
-        <hibernate-validator.version>6.2.1.Final</hibernate-validator.version>
+        <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
         <glassfish.javax.el.version>3.0.0</glassfish.javax.el.version>
         <lombok.version>1.18.22</lombok.version>
         <springdoc.version>1.6.4</springdoc.version>
