@@ -5,16 +5,16 @@ import static org.springframework.util.Assert.notNull;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.expediagroup.beans.transformer.BeanTransformer;
-import com.expediagroup.dao.movie.domain.response.MovieDaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.expediagroup.service.movie.domain.response.MovieSvcResponse;
+import com.expediagroup.beans.BeanUtils;
+import com.expediagroup.beans.transformer.BeanTransformer;
 import com.expediagroup.dao.movie.MovieDao;
 import com.expediagroup.dao.movie.domain.request.MovieDaoRequest;
+import com.expediagroup.dao.movie.domain.response.MovieDaoResponse;
 import com.expediagroup.service.movie.domain.request.MovieSvcRequest;
-import com.expediagroup.beans.BeanUtils;
+import com.expediagroup.service.movie.domain.response.MovieSvcResponse;
 
 @Service
 public class MovieService {
