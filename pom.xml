@@ -14,7 +14,7 @@
         <jdk.version>17</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.lib.version>2.6.2</spring.lib.version>
+        <spring.lib.version>2.6.3</spring.lib.version>
         <bull.version>2.2.0</bull.version>
         <!-- validation dependencies -->
         <hibernate-validator.version>6.2.1.Final</hibernate-validator.version>
@@ -37,7 +37,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
+        <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
