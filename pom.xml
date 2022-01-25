@@ -178,7 +178,7 @@
                 </executions>
                 <configuration>
                     <java>
-                        <!--                            <removeUnusedImports/>-->
+                        <removeUnusedImports/>
                         <trimTrailingWhitespace/>
                         <importOrder>
                             <order>${import.order}</order>
