@@ -25,7 +25,7 @@
         <junit.version>4.13.2</junit.version>
         <junit-platform.version>1.3.2</junit-platform.version>
         <junit-jupiter.version>5.8.2</junit-jupiter.version>
-        <spotless.maven.plugin.version>2.22.1</spotless.maven.plugin.version>
+        <spotless.maven.plugin.version>2.22.2</spotless.maven.plugin.version>
         <import.order>
             \#java,\#javax,\#jakarta,\#org,\#com,\#com.expediagroup,java,javax,jakarta,org,com,com.expediagroup,
         </import.order>
