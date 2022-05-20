@@ -14,7 +14,7 @@
         <jdk.version>17</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.lib.version>2.6.7</spring.lib.version>
+        <spring.lib.version>2.7.0</spring.lib.version>
         <bull.version>2.2.0</bull.version>
         <lombok.version>1.18.24</lombok.version>
         <springdoc.version>1.6.8</springdoc.version>
