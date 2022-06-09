@@ -4,10 +4,9 @@ updates:
   directory: "/"
   schedule:
     interval: daily
+  target-branch: develop
   open-pull-requests-limit: 10
   reviewers:
-  - fborriello
-  assignees:
   - fborriello
   labels:
   - configuration
@@ -18,6 +17,7 @@ updates:
   schedule:
     interval: daily
   target-branch: develop
+  open-pull-requests-limit: 10
   reviewers:
   - fborriello
   labels:
