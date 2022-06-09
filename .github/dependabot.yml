@@ -10,7 +10,7 @@ updates:
   - fborriello
   labels:
   - configuration
-  - update
+  - upgrade
   - dependencies
 - package-ecosystem: "github-actions"
   directory: "/"
@@ -22,5 +22,5 @@ updates:
   - fborriello
   labels:
   - configuration
-  - update
+  - upgrade
   - github-actions-lib
