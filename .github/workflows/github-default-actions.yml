@@ -1,0 +1,22 @@
+name: "Build and Test"
+on: [push]
+jobs:
+  build-n-test:
+    name: "Build and test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Cache Maven repository"
+        uses: actions/cache@v3.0.4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: "JDK set-up"
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: "Build and run tests"
+        run: |
+          mvn clean install
