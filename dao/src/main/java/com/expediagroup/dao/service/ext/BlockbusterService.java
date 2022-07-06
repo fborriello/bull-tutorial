@@ -7,8 +7,8 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import com.expediagroup.common.constants.Genre;
 import com.expediagroup.common.constants.ContactType;
+import com.expediagroup.common.constants.Genre;
 import com.expediagroup.common.constants.Sex;
 import com.expediagroup.dao.service.ext.domain.response.BlockbusterMovie;
 import com.expediagroup.dao.service.ext.domain.response.Contact;

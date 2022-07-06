@@ -52,6 +52,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>com.expediagroup.DemoApplication</mainClass>
+                    <jvmArguments>
+                        --add-opens=java.base/java.util=ALL-UNNAMED
+                    </jvmArguments>
                 </configuration>
             </plugin>
             <plugin>

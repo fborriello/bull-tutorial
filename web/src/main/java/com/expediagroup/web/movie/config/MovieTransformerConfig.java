@@ -10,7 +10,6 @@ import com.expediagroup.beans.transformer.BeanTransformer;
 import com.expediagroup.transformer.model.FieldMapping;
 import com.expediagroup.transformer.model.FieldTransformer;
 
-
 @Configuration
 public class MovieTransformerConfig {
     @Bean

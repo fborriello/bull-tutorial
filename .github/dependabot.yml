@@ -4,11 +4,23 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "04:00"
+  target-branch: develop
   open-pull-requests-limit: 10
   reviewers:
   - fborriello
-  assignees:
+  labels:
+  - configuration
+  - upgrade
+  - dependencies
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: daily
+  target-branch: develop
+  open-pull-requests-limit: 10
+  reviewers:
   - fborriello
   labels:
+  - configuration
   - upgrade
+  - github-actions-lib
