@@ -14,7 +14,7 @@
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <spring.lib.version>2.5.4</spring.lib.version>
-        <bull.version>2.1.0</bull.version>
+        <bull.version>2.2.2</bull.version>
         <lombok.version>1.18.20</lombok.version>
         <swagger.version>3.0.0</swagger.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
@@ -70,8 +70,10 @@
             </dependency>
             <dependency>
                 <groupId>com.expediagroup.beans</groupId>
-                <artifactId>bull-bean-transformer</artifactId>
+                <artifactId>bull-bom</artifactId>
                 <version>${bull.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
