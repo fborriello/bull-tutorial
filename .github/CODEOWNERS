@@ -1,0 +1,7 @@
+# CODEOWNERS file defines the users/teams that are able to approve pull requests.
+# These owners will be the default owners for everything on this repo.
+
+* borriello.fabio@gmail.com fborriello
+
+# Only some members of Customer Insights can alter the CODEOWNERS file
+.github/CODEOWNERS borriello.fabio@gmail.com
