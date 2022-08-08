@@ -4,6 +4,8 @@ updates:
   directory: "/"
   schedule:
     interval: daily
+    time: "09:00"
+    timezone: "Europe/Rome"
   target-branch: develop
   open-pull-requests-limit: 10
   reviewers:
@@ -16,6 +18,8 @@ updates:
   directory: "/"
   schedule:
     interval: daily
+    time: "09:00"
+    timezone: "Europe/Rome"
   target-branch: develop
   open-pull-requests-limit: 10
   reviewers:
