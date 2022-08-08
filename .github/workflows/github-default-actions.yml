@@ -15,7 +15,7 @@ jobs:
       - name: "JDK set-up"
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '18'
           distribution: 'adopt'
       - name: "Build and run tests"
         run: |
