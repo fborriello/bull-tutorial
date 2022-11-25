@@ -22,7 +22,7 @@
         <javax.servlet.version>4.0.1</javax.servlet.version>
         <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
         <jetty.version>9.4.16.v20190411</jetty.version>
-        <spotless.maven.plugin.version>2.27.2</spotless.maven.plugin.version>
+        <spotless.maven.plugin.version>2.28.0</spotless.maven.plugin.version>
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.checkstyle.plugin.version>3.2.0</maven.checkstyle.plugin.version>
