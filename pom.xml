@@ -20,7 +20,7 @@
         <springdoc.version>1.6.13</springdoc.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <javax.servlet.version>4.0.1</javax.servlet.version>
-        <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
+        <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
         <jetty.version>9.4.16.v20190411</jetty.version>
         <!-- testing dependencies -->
         <wiremock.version>2.27.2</wiremock.version>
