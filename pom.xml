@@ -15,12 +15,9 @@
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <spring.lib.version>3.0.0</spring.lib.version>
-        <bull.version>2.2.2</bull.version>
+        <bull.version>2.2.3</bull.version>
         <lombok.version>1.18.24</lombok.version>
         <springdoc.version>1.6.13</springdoc.version>
-        <validation-api.version>2.0.1.Final</validation-api.version>
-        <javax.servlet.version>4.0.1</javax.servlet.version>
-        <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
         <jetty.version>9.4.16.v20190411</jetty.version>
         <!-- testing dependencies -->
         <wiremock.version>2.27.2</wiremock.version>
@@ -65,16 +62,6 @@
                 <version>${spring.lib.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>${validation-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate.validator</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${hibernate-validator.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.expediagroup</groupId>
                 <artifactId>service</artifactId>
                 <version>${project.version}</version>
@@ -101,12 +88,6 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>${javax.servlet.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- testing dependencies -->
             <dependency>
