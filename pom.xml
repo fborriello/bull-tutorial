@@ -28,7 +28,7 @@
         <spotless.maven.plugin.version>2.29.0</spotless.maven.plugin.version>
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
-        <maven.checkstyle.plugin.version>3.2.0</maven.checkstyle.plugin.version>
+        <maven.checkstyle.plugin.version>3.2.1</maven.checkstyle.plugin.version>
         <!-- other settings -->
         <import.order>
             \#java,\#javax,\#jakarta,\#org,\#com,\#com.expediagroup,java,javax,jakarta,org,com,com.expediagroup,
