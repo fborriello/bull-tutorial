@@ -26,7 +26,7 @@
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <!-- maven dependencies -->
         <spotless.maven.plugin.version>2.33.0</spotless.maven.plugin.version>
-        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.checkstyle.plugin.version>3.2.1</maven.checkstyle.plugin.version>
         <!-- other settings -->
