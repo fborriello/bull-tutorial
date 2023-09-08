@@ -1,6 +1,6 @@
 # BULL tutorial
 
-Simple Spring Boot application containing a service that uses BULL for the object transformation
+Simple Spring Boot application containing a service that uses [BULL](https://github.com/ExpediaGroup/bull) for the object transformation
 
 [![Build Status](https://travis-ci.com/fborriello/bull-tutorial.svg?branch=master)](https://app.travis-ci.com/github/fborriello/bull-tutorial)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-success?logo=dependabot)](https://img.shields.io/badge/dependabot-enabled-success?logo=dependabot)
