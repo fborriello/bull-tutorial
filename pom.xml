@@ -17,7 +17,7 @@
         <spring.lib.version>3.2.3</spring.lib.version>
         <bull.version>2.2.4</bull.version>
         <lombok.version>1.18.30</lombok.version>
-        <springdoc.version>1.7.0</springdoc.version>
+        <springdoc.version>1.8.0</springdoc.version>
         <!-- testing dependencies -->
         <wiremock.version>3.4.2</wiremock.version>
         <junit.version>4.13.2</junit.version>
