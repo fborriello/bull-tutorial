@@ -15,7 +15,7 @@
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <spring.lib.version>3.4.5</spring.lib.version>
-        <bull.version>2.2.4</bull.version>
+        <bull.version>3.0.0</bull.version>
         <lombok.version>1.18.38</lombok.version>
         <springdoc.version>1.8.0</springdoc.version>
         <!-- testing dependencies -->
