@@ -56,7 +56,7 @@ jobs:
     - name: "JDK set-up"
       uses: actions/setup-java@v5
       with:
-        java-version: '18'
+        java-version: '24'
         distribution: 'adopt'
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
