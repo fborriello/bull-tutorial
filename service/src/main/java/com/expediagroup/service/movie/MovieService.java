@@ -18,14 +18,17 @@ import com.expediagroup.service.movie.domain.response.MovieSvcResponse;
 
 @Service
 public class MovieService {
-    @Autowired
-    private BeanUtils beanUtils;
+    private final BeanUtils beanUtils;
+    private final MovieDao movieDao;
+    private final BeanTransformer movieSvcResponseTransformer;
 
     @Autowired
-    private MovieDao movieDao;
-
-    @Autowired
-    private BeanTransformer movieSvcResponseTransformer;
+    public MovieService(final BeanUtils beanUtils, final MovieDao movieDao,
+            final BeanTransformer movieSvcResponseTransformer) {
+        this.beanUtils = beanUtils;
+        this.movieDao = movieDao;
+        this.movieSvcResponseTransformer = movieSvcResponseTransformer;
+    }
 
     public List<MovieSvcResponse> searchMovie(final MovieSvcRequest movieSvcRequest) {
         notNull(movieSvcRequest, "movieSvcRequest cannot be null!");
