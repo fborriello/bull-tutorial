@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           java-version: '21'
-          distribution: 'adopt'
+          distribution: 'temurin'
       - name: "Build and run tests"
         run: |
           mvn clean install
