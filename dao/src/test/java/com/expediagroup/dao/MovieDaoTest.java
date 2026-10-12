@@ -168,9 +168,7 @@ public class MovieDaoTest {
     public void testSearchMovieUsesCorrectTitleFromRequest() {
         // GIVEN
         String customTitle = "Custom Movie Title";
-        MovieDaoRequest customRequest = MovieDaoRequest.builder()
-                .title(customTitle)
-                .build();
+        MovieDaoRequest customRequest = new MovieDaoRequest(customTitle, null);
 
         when(blockbusterService.searchMovie(customTitle))
                 .thenReturn(Collections.emptyList());
@@ -201,9 +199,6 @@ public class MovieDaoTest {
     }
 
     private MovieDaoRequest createMovieDaoRequest() {
-        return MovieDaoRequest.builder()
-                .title(MOVIE_TITLE)
-                .genre(MOVIE_GENRE.name())
-                .build();
+        return new MovieDaoRequest(MOVIE_TITLE, MOVIE_GENRE.name());
     }
 }

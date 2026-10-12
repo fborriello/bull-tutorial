@@ -100,9 +100,6 @@ public class MovieServiceTest {
     }
 
     private MovieSvcRequest createMovieSvcRequest() {
-        MovieSvcRequest request = new MovieSvcRequest();
-        request.setTitle(MOVIE_TITLE);
-        request.setGenre(MOVIE_GENRE);
-        return request;
+        return new MovieSvcRequest(MOVIE_TITLE, MOVIE_GENRE);
     }
 }

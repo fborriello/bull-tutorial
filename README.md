@@ -8,7 +8,7 @@ Simple Spring Boot application containing a service that uses [BULL](https://git
 
 ## Requirements
 
-* JDK 18 or above
+* JDK 25 or above
 * Maven
 * IDE
 

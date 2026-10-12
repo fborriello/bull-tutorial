@@ -4,7 +4,6 @@ import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import jakarta.validation.constraints.NotNull;
 
@@ -79,6 +78,6 @@ public class MovieController {
     private List<Movie> transformResponse(final List<MovieSvcResponse> foundMovies) {
         return foundMovies.stream()
                 .map(movieSvcResponse -> movieResponseTransformer.transform(movieSvcResponse, Movie.class))
-                .collect(Collectors.toList());
+                .toList();
     }
 }
