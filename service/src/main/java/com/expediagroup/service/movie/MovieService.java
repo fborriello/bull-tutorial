@@ -3,7 +3,6 @@ package com.expediagroup.service.movie;
 import static org.springframework.util.Assert.notNull;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,6 +42,6 @@ public class MovieService {
     private List<MovieSvcResponse> transformResponse(final List<MovieDaoResponse> foundMovies) {
         return foundMovies.stream()
                 .map(movie -> movieSvcResponseTransformer.transform(movie, MovieSvcResponse.class))
-                .collect(Collectors.toList());
+                .toList();
     }
 }
